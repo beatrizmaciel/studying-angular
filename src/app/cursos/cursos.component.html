@@ -2,3 +2,18 @@
   Lista de cursos do {{nomePortal}}
 </p>
 <app-cursos-detalhe></app-cursos-detalhe>
+
+<ul>
+  <!--
+  *ngFor serve para iterar um array, seria equivalente a utilizar
+  este for dentro do constructor de cursos.components.ts:
+
+    for(let i = 0; i < this.cursos.length; i++) {
+      let curso = this.cursos[i];
+    }
+
+  Atenção! Para o *ngFor funcionar, o CommonModule precisa
+  ser importado no cursos.component.ts
+  -->
+  <li *ngFor="let curso of cursos">{{ curso }}</li>
+</ul>
